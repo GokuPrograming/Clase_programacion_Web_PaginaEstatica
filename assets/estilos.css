@@ -3,16 +3,29 @@
 
 body {
     /* Establece el fondo como un gradiente lineal sin movimiento */
-    background: linear-gradient(to right, rgb(26, 151, 255), hsl(207, 100%, 77%));
-    /* Define los dos colores del gradiente, de izquierda a derecha */
-    font-family: 'Rubik Iso';
+    background: linear-gradient(to right, rgb(20, 144, 175), rgb(20, 144, 175));
+
+    body,html {
+        font-family: verdana;
+        font-size: 2vw;
+        color: white;
+        text-shadow: 1px 0px 0px black,
+            0px 1px 0px black,
+            -1px 0px 0px black,
+            0px -1px 0px black;
+
+        text-align: justify;
+        animation: fuego 2s infinite alternate;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 
 .fondo {
     /* Define el fondo como un gradiente lineal */
-    background: linear-gradient(90deg, rgb(26, 151, 255), hsl(207, 100%, 77%));
-    /* Establece un degradado que va de rojo (#ff0000) a verde (#00ff00) de izquierda a derecha */
+    background: linear-gradient(90deg, rgb(26, 151, 255),rgb(6, 66, 99));
+
 
     /* Configura la animación de desvanecimiento */
     animation: fade 4s linear infinite;
@@ -38,14 +51,15 @@ body {
 
 .fondo_nav {
     background-color: black;
-   
-font-family: 'Rubik Iso', cursive;
+
+    font-family: 'Rubik Iso', cursive;
 }
 
 /*nav menu iluminado*/
 .haloDeLuz {
     background-color: black;
-    position: relative; display: flex;
+    position: relative;
+    display: flex;
     flex-flow: wrap;
     background-color: rgb(3, 3, 3);
     padding: 20px;
@@ -53,48 +67,57 @@ font-family: 'Rubik Iso', cursive;
     margin-left: 15px;
     margin-right: 15px;
 }
+
 /* Crea un halo de destello de luz en el lado izquierdo */
 .haloDeLuz::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -20px; /* Ajusta la posición del halo */
-    width: 2px; /* Ajusta el ancho del halo */
+    left: -20px;
+    /* Ajusta la posición del halo */
+    width: 2px;
+    /* Ajusta el ancho del halo */
     height: 100%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
     opacity: 0.7;
-    animation: halo-animation 5s ease-in-out infinite; /* Agrega una animación de destello */
-  }
-  
-  /* Crea un halo de destello de luz en el lado derecho */
-  .haloDeLuz::after {
+    animation: halo-animation 5s ease-in-out infinite;
+    /* Agrega una animación de destello */
+}
+
+/* Crea un halo de destello de luz en el lado derecho */
+.haloDeLuz::after {
     content: "";
     position: absolute;
     top: 0;
-    right: -20px; /* Ajusta la posición del halo */
-    width: 2px; /* Ajusta el ancho del halo */
+    right: -20px;
+    /* Ajusta la posición del halo */
+    width: 2px;
+    /* Ajusta el ancho del halo */
     height: 100%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
     opacity: 0.7;
-    animation: halo-animation 5s ease-in-out infinite; /* Agrega una animación de destello */
-  }
-  
-  /* Define la animación de destello */
-  @keyframes halo-animation {
+    animation: halo-animation 5s ease-in-out infinite;
+    /* Agrega una animación de destello */
+}
+
+/* Define la animación de destello */
+@keyframes halo-animation {
     0% {
-      transform: scale(1);
-      opacity: 0.7;
+        transform: scale(1);
+        opacity: 0.7;
     }
+
     50% {
-      transform: scale(1.1);
-      opacity: 0.3;
+        transform: scale(1.1);
+        opacity: 0.3;
     }
+
     100% {
-      transform: scale(1);
-      opacity: 0.7;
+        transform: scale(1);
+        opacity: 0.7;
     }
-  }
-  
+}
+
 
 
 
@@ -182,7 +205,7 @@ PARA EL HEADER
     right: 50%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent); /* Degradado desde negro transparente a transparente */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+    /* Degradado desde negro transparente a transparente */
     z-index: 1;
 }
-  
