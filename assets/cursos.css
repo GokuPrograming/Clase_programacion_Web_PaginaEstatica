@@ -8,6 +8,7 @@
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .columna img {
     width: 100%;
     height: 200px;
@@ -42,9 +43,12 @@ p {
 .back-black {
     background-color: black;
     padding: 150px;
+    color: aliceblue;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
 }
 
 
 
 
-/*fondo brillante de nav menu
+/*fondo brillante de nav menu*/
