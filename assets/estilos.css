@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+
+body {
+    /* Establece el fondo como un gradiente lineal sin movimiento */
+    background: linear-gradient(to right, rgb(26, 151, 255), hsl(207, 100%, 77%));
+    /* Define los dos colores del gradiente, de izquierda a derecha */
+    font-family: 'Rubik Iso';
+}
+
+
+.fondo {
+    /* Define el fondo como un gradiente lineal */
+    background: linear-gradient(90deg, rgb(26, 151, 255), hsl(207, 100%, 77%));
+    /* Establece un degradado que va de rojo (#ff0000) a verde (#00ff00) de izquierda a derecha */
+
+    /* Configura la animación de desvanecimiento */
+    animation: fade 4s linear infinite;
+}
+
+/* Define la animación de desvanecimiento */
+@keyframes fade {
+    0% {
+        opacity: 1;
+        /* Comienza completamente visible */
+    }
+
+    50% {
+        opacity: 0.5;
+        /* Se desvanece al 50% de opacidad a la mitad de la animación */
+    }
+
+    100% {
+        opacity: 1;
+        /* Vuelve a ser completamente visible al final de la animación */
+    }
+}
+
+.fondo_nav {
+    background-color: black;
+}
+
+/*nav menu iluminado*/
+.haloDeLuz {
+    background-color: black;
+    position: relative; display: flex;
+    flex-flow: wrap;
+    background-color: rgb(3, 3, 3);
+    padding: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/* Crea un halo de destello de luz en el lado izquierdo */
+.haloDeLuz::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px; /* Ajusta la posición del halo */
+    width: 2px; /* Ajusta el ancho del halo */
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
+    opacity: 0.7;
+    animation: halo-animation 5s ease-in-out infinite; /* Agrega una animación de destello */
+  }
+  
+  /* Crea un halo de destello de luz en el lado derecho */
+  .haloDeLuz::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px; /* Ajusta la posición del halo */
+    width: 2px; /* Ajusta el ancho del halo */
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
+    opacity: 0.7;
+    animation: halo-animation 5s ease-in-out infinite; /* Agrega una animación de destello */
+  }
+  
+  /* Define la animación de destello */
+  @keyframes halo-animation {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+  }
+  
+
+
+
+
+/* Estilo básico de la imagen */
+.imagen-colgando {
+    width: 125px;
+    /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Agrega una sombra para dar profundidad */
+    transform: rotate(-3deg);
+    /* Inclina la imagen ligeramente hacia la izquierda */
+
+}
+
+
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+/*
+
+PARA EL HEADER
+*/
+/* Estilos para el encabezado */
+/* Estilos para el encabezado */
+.encabezado {
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+
+}
+
+/* Estilos para el contenedor de la imagen y el título */
+.imagen-titulo {
+    position: relative;
+    /* Hace que el posicionamiento relativo sea el contexto */
+    display: inline-block;
+    /* Permite que el contenedor ocupe solo el espacio necesario */
+    overflow: hidden;
+}
+
+/* Estilos para la imagen en el encabezado */
+.imagen-titulo img {
+    max-width: 100%;
+    /* Asegura que la imagen se ajuste al ancho del contenedor */
+    height: 100%;
+    /* Mantiene la proporción de la imagen */
+    display: block;
+}
+
+/* Estilos para el título en el encabezado */
+.imagen-titulo h1 {
+    position: absolute;
+    /* Permite el posicionamiento absoluto dentro del contenedor */
+    top: 20%;
+    /* Lo coloca en la mitad superior del contenedor */
+    left: 80%;
+    /* Lo coloca en el centro horizontal del contenedor */
+    transform: translate(-50%, -50%);
+    /* Lo centra tanto vertical como horizontalmente */
+    font-size: 36px;
+    /* Tamaño del texto del título */
+    color: #fff;
+    /* Color del texto del título */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el título */
+    padding: 10px;
+    /* Espaciado interno para el título */
+}
+
+.imagen-titulo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent); /* Degradado desde negro transparente a transparente */
+    z-index: 1;
+}
+  
