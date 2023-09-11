@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 
 
-body {
+html,body {
     /* Establece el fondo como un gradiente lineal sin movimiento */
     background: linear-gradient(to right, rgb(20, 144, 175), rgb(20, 144, 175));
-
     body,html {
         font-family: verdana;
         font-size: 2vw;
@@ -50,8 +49,8 @@ body {
 }
 
 .fondo_nav {
-    background-color: black;
 
+    background-color: black;
     font-family: 'Rubik Iso', cursive;
 }
 
